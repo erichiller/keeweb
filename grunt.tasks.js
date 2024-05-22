@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         'copy:icons',
         // 'copy:wallpapers',
         'copy:manifest',
-        'htmlinkrel:images',
+        // 'htmlinkrel:images',
         'webpack:app',
         'inline',
         'htmlinkrel:assets',
