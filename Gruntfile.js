@@ -552,17 +552,19 @@ module.exports = function (grunt) {
                 afterExtract: [
                     serialHooks([
                         function (buildPath, electronVersion, platform, arch) {
-                            // const pathWallpapersTo = path.join(buildPath, 'wallpapers/');
-                            // grunt.log.writeln(
-                            //     chalk.green(`Electron → Extract Complete →`),
-                            //     chalk.yellow(buildPath)
-                            // );
-                            // fs.copySync('./app/wallpapers', pathWallpapersTo);
+                            const pathWallpapersTo = path.join(buildPath, 'wallpapers/');
+                            grunt.log.writeln(
+                                chalk.green(`Electron → Extract Complete →`),
+                                chalk.yellow(buildPath)
+                            );
+                            /*
+                            fs.copySync('./app/wallpapers', pathWallpapersTo);
+                            */
 
-                            // grunt.log.writeln(
-                            //     chalk.green(`Electron → Moving Wallpapers →`),
-                            //     chalk.yellow(pathWallpapersTo)
-                            // );
+                            grunt.log.writeln(
+                                chalk.green(`Electron → Moving Wallpapers →`),
+                                chalk.yellow(pathWallpapersTo)
+                            );
                         }
                     ])
                 ],
