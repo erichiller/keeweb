@@ -1,4 +1,4 @@
-#!/bin/bash -e -x
+#!/bin/bash -ex
 
 echo "Beginning ($0)"
 git config --global --add safe.directory /github/workspace
