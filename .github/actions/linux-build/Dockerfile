@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENV TZ Europe/Helsinki
+ENV TZ="Europe/Helsinki"
 
 RUN apt-get update
 RUN apt-get install -y build-essential git-core unzip curl pkg-config rpm
