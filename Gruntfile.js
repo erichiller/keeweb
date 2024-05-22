@@ -352,6 +352,7 @@ module.exports = function (grunt) {
         */
 
         'htmlinkrel': {
+            /*
             'images': {
                 options: {
                     replacements: [
@@ -373,6 +374,7 @@ module.exports = function (grunt) {
                     ]
                 }
             },
+            */
             'assets': {
                 options: {
                     replacements: [
