@@ -17,8 +17,7 @@ jobs:
       #     tagRegexGroup: 1
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          repository: erichiller/keeweb
+
       # - name: Upgrade Node.js
       #   uses: actions/setup-node@v4
       #   with:
@@ -30,6 +29,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install npm modules
         run: npm ci
