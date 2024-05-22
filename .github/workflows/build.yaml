@@ -4,7 +4,7 @@ on:
   push:
     tags: [ '*' ]
 env:
-  GIT_TAG_NAME: "1.18.107"
+  GIT_TAG_NAME: "1.18.7"
 jobs:
   web:
     runs-on: ubuntu-latest
