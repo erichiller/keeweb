@@ -355,16 +355,16 @@ module.exports = function (grunt) {
             'images': {
                 options: {
                     replacements: [
-                    //     {
-                    //         name: 'Preload: Wallpapers',
-                    //         rel: 'preload',
-                    //         pattern: /<!--{{PRELOAD_IMAGES}}-->/,
-                    //         hrefPath: 'wallpapers',
-                    //         searchPath: 'app/wallpapers',
-                    //         as: 'image',
-                    //         type: 'image/jpeg',
-                    //         cors: 'anonymous'
-                    //     }
+                        {
+                            name: 'Preload: Wallpapers',
+                            rel: 'preload',
+                            pattern: /<!--{{PRELOAD_IMAGES}}-->/,
+                            hrefPath: 'wallpapers',
+                            searchPath: 'app/wallpapers',
+                            as: 'image',
+                            type: 'image/jpeg',
+                            cors: 'anonymous'
+                        }
                     ],
                     app: [
                         {
