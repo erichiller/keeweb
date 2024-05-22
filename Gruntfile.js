@@ -78,8 +78,7 @@ module.exports = function (grunt) {
     });
 
     const linuxDependencies = [
-        'libappindicator1',
-        'libgconf-2-4',
+        'libappindicator3-1',
         'gnome-keyring',
         'libxtst6',
         'libx11-6',
