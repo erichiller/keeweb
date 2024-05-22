@@ -25,11 +25,11 @@ jobs:
       #     node-version: '20'
       #     registry-url: 'https://registry.npmjs.org'
 
-      - name: Upgrade Node.js
-        uses: actions/setup-node@v2
+      - name: "⚙️ Setup Node"
+        id: task_lint_node_setup
+        uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Install npm modules
         run: npm ci
