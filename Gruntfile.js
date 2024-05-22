@@ -132,20 +132,20 @@ module.exports = function (grunt) {
                 expand: true,
                 nonull: true
             },
-            wallpapers: {
-                cwd: 'app/wallpapers/',
-                src: ['*.jpg'],
-                dest: 'tmp/wallpapers/',
-                expand: true,
-                nonull: true
-            },
-            'dist-wallpapers': {
-                cwd: 'app/wallpapers/',
-                src: ['*.jpg'],
-                dest: 'dist/wallpapers/',
-                expand: true,
-                nonull: true
-            },
+            // wallpapers: {
+            //     cwd: 'app/wallpapers/',
+            //     src: ['*.jpg'],
+            //     dest: 'tmp/wallpapers/',
+            //     expand: true,
+            //     nonull: true
+            // },
+            // 'dist-wallpapers': {
+            //     cwd: 'app/wallpapers/',
+            //     src: ['*.jpg'],
+            //     dest: 'dist/wallpapers/',
+            //     expand: true,
+            //     nonull: true
+            // },
             manifest: {
                 cwd: 'app/manifest/',
                 src: ['*.json', '*.xml'],
@@ -165,13 +165,13 @@ module.exports = function (grunt) {
                 dest: 'tmp/desktop/app/index.html',
                 nonull: true
             },
-            'desktop-html-wallpaper': {
-                cwd: 'dist/wallpapers/',
-                src: ['*.jpg'],
-                dest: 'tmp/desktop/app/wallpapers/',
-                expand: true,
-                nonull: true
-            },
+            // 'desktop-html-wallpaper': {
+            //     cwd: 'dist/wallpapers/',
+            //     src: ['*.jpg'],
+            //     dest: 'tmp/desktop/app/wallpapers/',
+            //     expand: true,
+            //     nonull: true
+            // },
             'desktop-app-content': {
                 cwd: 'desktop/',
                 src: ['**', '!package-lock.json'],
@@ -355,16 +355,16 @@ module.exports = function (grunt) {
             'images': {
                 options: {
                     replacements: [
-                        {
-                            name: 'Preload: Wallpapers',
-                            rel: 'preload',
-                            pattern: /<!--{{PRELOAD_IMAGES}}-->/,
-                            hrefPath: 'wallpapers',
-                            searchPath: 'app/wallpapers',
-                            as: 'image',
-                            type: 'image/jpeg',
-                            cors: 'anonymous'
-                        }
+                    //     {
+                    //         name: 'Preload: Wallpapers',
+                    //         rel: 'preload',
+                    //         pattern: /<!--{{PRELOAD_IMAGES}}-->/,
+                    //         hrefPath: 'wallpapers',
+                    //         searchPath: 'app/wallpapers',
+                    //         as: 'image',
+                    //         type: 'image/jpeg',
+                    //         cors: 'anonymous'
+                    //     }
                     ],
                     app: [
                         {
@@ -548,21 +548,21 @@ module.exports = function (grunt) {
                 appCopyright: `Copyright © ${year} Antelle`,
                 appVersion: pkg.version,
                 buildVersion: sha,
-                extraResource: path.join(__dirname, 'app/wallpapers'),
+                // extraResource: path.join(__dirname, 'app/wallpapers'),
                 afterExtract: [
                     serialHooks([
                         function (buildPath, electronVersion, platform, arch) {
-                            const pathWallpapersTo = path.join(buildPath, 'wallpapers/');
-                            grunt.log.writeln(
-                                chalk.green(`Electron → Extract Complete →`),
-                                chalk.yellow(buildPath)
-                            );
-                            fs.copySync('./app/wallpapers', pathWallpapersTo);
+                            // const pathWallpapersTo = path.join(buildPath, 'wallpapers/');
+                            // grunt.log.writeln(
+                            //     chalk.green(`Electron → Extract Complete →`),
+                            //     chalk.yellow(buildPath)
+                            // );
+                            // fs.copySync('./app/wallpapers', pathWallpapersTo);
 
-                            grunt.log.writeln(
-                                chalk.green(`Electron → Moving Wallpapers →`),
-                                chalk.yellow(pathWallpapersTo)
-                            );
+                            // grunt.log.writeln(
+                            //     chalk.green(`Electron → Moving Wallpapers →`),
+                            //     chalk.yellow(pathWallpapersTo)
+                            // );
                         }
                     ])
                 ],
