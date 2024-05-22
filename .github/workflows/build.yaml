@@ -79,25 +79,25 @@ jobs:
       # - name: Upload AppImage artifact
       #   uses: actions/upload-artifact@v1
       #   with:
-      #     name: KeeWeb-${{ steps.get_tag.outputs.tag }}.linux.AppImage
-      #     path: dist/desktop/KeeWeb-${{ steps.get_tag.outputs.tag }}.linux.AppImage
+      #     name: KeeWeb-${{ env.GIT_TAG_NAME }}.linux.AppImage
+      #     path: dist/desktop/KeeWeb-${{ env.GIT_TAG_NAME }}.linux.AppImage
       # - name: Upload snap artifact
       #   uses: actions/upload-artifact@v1
       #   with:
-      #     name: KeeWeb-${{ steps.get_tag.outputs.tag }}.linux.snap
-      #     path: dist/desktop/KeeWeb-${{ steps.get_tag.outputs.tag }}.linux.snap
+      #     name: KeeWeb-${{ env.GIT_TAG_NAME }}.linux.snap
+      #     path: dist/desktop/KeeWeb-${{ env.GIT_TAG_NAME }}.linux.snap
       - name: Upload deb artifact
         uses: actions/upload-artifact@v4
         with:
-          name: KeeWeb-${{ steps.get_tag.outputs.tag }}.linux.x64.deb
-          path: dist/desktop/KeeWeb-${{ steps.get_tag.outputs.tag }}.linux.x64.deb
+          name: KeeWeb-${{ env.GIT_TAG_NAME }}.linux.x64.deb
+          path: dist/desktop/KeeWeb-${{ env.GIT_TAG_NAME }}.linux.x64.deb
       # - name: Upload zip artifact
       #   uses: actions/upload-artifact@v1
       #   with:
-      #     name: KeeWeb-${{ steps.get_tag.outputs.tag }}.linux.x64.zip
-      #     path: dist/desktop/KeeWeb-${{ steps.get_tag.outputs.tag }}.linux.x64.zip
+      #     name: KeeWeb-${{ env.GIT_TAG_NAME }}.linux.x64.zip
+      #     path: dist/desktop/KeeWeb-${{ env.GIT_TAG_NAME }}.linux.x64.zip
       # - name: Upload rpm artifact
       #   uses: actions/upload-artifact@v1
       #   with:
-      #     name: KeeWeb-${{ steps.get_tag.outputs.tag }}.linux.x86_64.rpm
-      #     path: dist/desktop/KeeWeb-${{ steps.get_tag.outputs.tag }}.linux.x86_64.rpm
+      #     name: KeeWeb-${{ env.GIT_TAG_NAME }}.linux.x86_64.rpm
+      #     path: dist/desktop/KeeWeb-${{ env.GIT_TAG_NAME }}.linux.x86_64.rpm
