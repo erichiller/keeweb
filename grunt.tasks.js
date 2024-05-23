@@ -131,7 +131,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build-desktop-dist-linux', [
-        'deb:linux-x64',
+        'deb:linux-x64' //,
         // 'electron-builder:linux',
         // 'copy:electron-builder-dist-linux-rpm',
         // 'copy:electron-builder-dist-linux-snap',
