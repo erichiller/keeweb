@@ -2,7 +2,7 @@
 
 echo "Beginning ($0)"
 
-apt install snapd
+apt install -y snapd
 snap install snapcraft --classic
 git config --global --add safe.directory /github/workspace
 
